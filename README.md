@@ -1,6 +1,6 @@
 # Chest X-ray Classification (Normal vs Abnormal)
 
-This project focuses on developing a deep learning pipeline to classify chest X-ray images as **Normal** or **Abnormal** (indicating possible diseases). The model uses **Transfer Learning** with **ResNet50** and includes image preprocessing, fine-tuning.
+This project focuses on developing a deep learning pipeline to classify chest X-ray images as **Normal** or **Abnormal** (indicating possible diseases). The model uses **Transfer Learning** with **ResNet50** and includes image preprocessing, augmentation, fine-tuning.
 
 ---
 
@@ -122,18 +122,24 @@ pip install -r requirements.txt
 
 ---
 
-## 🧠 Future Improvements
+## 💡 Insights and Conclusions
 
-* Use advanced data augmentation
-* Apply Focal Loss for better class handling
-* Convert to Streamlit or Flask app for demo
-* Deploy model via ONNX or TFLite for edge devices
+* The model successfully distinguishes between Normal and Abnormal chest X-rays using a ResNet50-based architecture.
+
+* Basic image preprocessing techniques (grayscale equalization, noise injection, and rotation) helped the model learn radiological patterns.
+
+* Balancing the dataset was essential to prevent model bias toward the majority class.
+
+* Fine-tuning the top layers of ResNet50 improved generalization and recall on minority (Abnormal) class.
+
+* With limited data and moderate compute (Google Colab), the model achieved a good balance between performance and explainability.
+
 
 ---
 
 ## 👨‍💻 Author
 
-**Manish Channe**
+**Manish**
 
 AI & Data Science Engineer
 
@@ -142,3 +148,7 @@ AI & Data Science Engineer
 ## 🔗 License
 
 This project is for educational/research purposes only.
+
+## Note 
+
+To ensure compatibility with Google Colab GPU and avoid memory issues, we limited training to 5,000 images per class (10,000 total). This subset was balanced to ensure equal representation of Normal and Abnormal cases.
