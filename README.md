@@ -134,6 +134,7 @@ pip install -r requirements.txt
 ## 👨‍💻 Author
 
 **Manish Channe**
+
 AI & Data Science Engineer
 
 ---
